@@ -2,7 +2,7 @@
     "name": "night-jellyfish",
     "displayName": "Night Jellyfish",
     "description": "Night Jellyfish - dark theme for VSCode based on Night Owl and Night Wolf, optimized for Rust",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "SaiYs",
     "engines": {
         "vscode": "^1.68.0"
@@ -12,7 +12,12 @@
             {
                 "label": "Night Jellyfish",
                 "uiTheme": "vs-dark",
-                "path": "./themes/night-jellyfish-color-theme.json"
+                "path": "./themes/night-jellyfish.json"
+            },
+            {
+                "label": "Night Jellyfish (No Italics)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/night-jellyfish-noitalics.json"
             }
         ]
     },
@@ -32,5 +37,7 @@
         "color": "#1f1e33",
         "theme": "dark"
     },
-    "icon": "images/night-jellyfish-icon.png"
+    "dependencies": {
+        "chroma-js": "^2.4.2"
+    }
 }
