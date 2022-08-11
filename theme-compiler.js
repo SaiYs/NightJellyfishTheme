@@ -44,26 +44,19 @@ function compile() {
     const src = require(compFile)
     let dictstring = JSON.stringify(src)
 
-    let dictstringNi = dictstring.replace(
-      /"fontStyle":"italic"/g,
-      '"fontStyle":"normal"',
-    )
 
     // create json file name
     let jsonName = compFile.replace('.js', '').split('/')
     jsonName = jsonName[jsonName.length - 1]
-    let jsonNameNi = jsonName + '-noitalics'
 
     // change name field inside the json
     dictstring = dictstring.replace(/themename/g, jsonName)
-    dictstringNi = dictstringNi.replace(/themename/g, jsonNameNi)
 
     try {
       fs.writeFileSync(`./themes/${jsonName}.json`, dictstring)
-      fs.writeFileSync(`./themes/${jsonNameNi}.json`, dictstringNi)
     } catch (e) {
       console.error('error', e)
     }
-    console.info(`${jsonName}.json and ${jsonNameNi}.json files compiled!`)
+    console.info(`${jsonName}.json file compiled!`)
   }
 }

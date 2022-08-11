@@ -13,11 +13,6 @@
                 "label": "Night Jellyfish",
                 "uiTheme": "vs-dark",
                 "path": "./themes/night-jellyfish.json"
-            },
-            {
-                "label": "Night Jellyfish (No Italics)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/night-jellyfish-noitalics.json"
             }
         ]
     },
