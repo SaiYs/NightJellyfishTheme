@@ -2,7 +2,7 @@ const { syntaxCyan, danger, syntaxPurple, syntaxViolet, syntaxGreen, syntaxRed, 
 
 const semantic_colors = {
   "attribute": syntaxCyan.hex(),
-  "enum": syntaxYellow.hex(),
+  "enum": syntaxOrange.hex(),
   "function": {
     "foreground": syntaxCyan.hex(),
     "italic": false,
@@ -19,11 +19,11 @@ const semantic_colors = {
   "namespace.crateRoot": {
     "bold": true
   },
-  "struct": syntaxYellow.hex(),
+  "struct": syntaxOrange.hex(),
   "trait": syntaxPurple.hex(),
   "interface": syntaxPurple.hex(),
-  "typeAlias": syntaxYellow.hex(),
-  "union": syntaxYellow.hex(),
+  "typeAlias": syntaxOrange.hex(),
+  "union": syntaxOrange.hex(),
   "boolean": {
     "foreground": syntaxOrange.hex(),
     "italic": false
@@ -51,7 +51,7 @@ const semantic_colors = {
   "semicolon": text.hex(),
   "macroBang": text.hex(),
   "builtinAttribute": syntaxCyan.hex(),
-  "builtinType": syntaxYellow.hex(),
+  "builtinType": syntaxOrange.hex(),
   "comment": comment.hex(),
   "*.injected": {
     "italic": false,
@@ -82,12 +82,12 @@ const semantic_colors = {
     "italic": false
   },
   "selfTypeKeyword": {
-    "foreground": syntaxYellow.hex(),
+    "foreground": syntaxOrange.hex(),
     "bold": true,
     "italic": false,
   },
   "typeParameter": {
-    "foreground": syntaxYellow.hex(),
+    "foreground": syntaxOrange.hex(),
     "bold": true
   },
   "unresolvedReference": text.hex(),
