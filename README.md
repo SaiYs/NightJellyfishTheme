@@ -1,15 +1,15 @@
 # Night Jellyfish
 
-Dark theme for VSCode based on [Night Wolf](https://github.com/mao-santaella-rs/NightWolfTheme)
+Dark theme for VSCode inspired by [Night Wolf](https://github.com/mao-santaella-rs/NightWolfTheme)
 
 ## Example
 
-![rust](images/rust.png)
+![Rust](img/rust.png)
 
 ## Features
 
-- Hight contrast cursor color in the editor and terminal
-- Semantic highlighting for Rust powered by [rust-analyzer](https://rust-analyzer.github.io/manual.html#semantic-syntax-highlighting)
+- Legible and Beautiful
+- Semantic highlighting optimized for Rust powered by [rust-analyzer](https://rust-analyzer.github.io/manual.html#semantic-syntax-highlighting)
 
 ## Contribute
 
