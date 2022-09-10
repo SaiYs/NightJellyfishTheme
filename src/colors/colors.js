@@ -37,7 +37,7 @@ colors.warningDark = chroma(102, 80, 16) // rgb(102, 80, 16)
 colors.warning = chroma(255, 200, 40) // rgb(255, 200, 40)
 colors.warningLight = chroma(255, 227, 156) // rgb(255, 227, 156)
 
-colors.dangerDark = chroma(071, 32, 32) // rgb(071, 32, 32)
+colors.dangerDark = chroma(71, 32, 32) // rgb(71, 32, 32)
 colors.danger = chroma(240, 80, 80) // rgb(240, 80, 80)
 colors.dangerLight = chroma(216, 130, 130) // rgb(216, 130, 130)
 
@@ -45,7 +45,6 @@ colors.dangerLight = chroma(216, 130, 130) // rgb(216, 130, 130)
 colors.testA = chroma(255, 255, 0) // rgb(255, 255, 0)
 colors.testB = chroma(0, 255, 0) // rgb(0, 255, 0)
 colors.testC = chroma(255, 100, 0) // rgb(255, 100, 0)
-
 
 colors.principal = chroma(31, 30, 51) // rgb(31, 30, 51)
 colors.principal_0 = chroma(47, 46, 78) // rgb(47, 46, 78)
