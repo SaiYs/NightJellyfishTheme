@@ -1,3 +1,4 @@
+import chroma from "https://esm.sh/chroma-js@2.4.2";
 import { semantic_colors } from "./semantic-colors.ts";
 
 export function template(colors: Record<string, chroma.Color>) {

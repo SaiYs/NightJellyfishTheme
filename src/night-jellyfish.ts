@@ -88,7 +88,7 @@ const colors: Record<string, chroma.Color> = {
 
   gitInsertedBg: chroma("#14332E"),
   gitRemovedBg: chroma("#1E131C"),
-  gitignoreExplorer: chroma("#635fa1"),
+  gitignoreExplorer: principal.brighten(1.5),
 
   // INTERFACE COLORS
   interBackground: principal,

@@ -1,3 +1,5 @@
+import chroma from "https://esm.sh/chroma-js@2.4.2";
+
 export function semantic_colors(colors: Record<string, chroma.Color>) {
   return {
     "attribute": colors.syntaxCyan.hex(),
