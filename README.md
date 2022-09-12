@@ -2,9 +2,29 @@
 
 Dark theme for VSCode inspired by [Night Wolf](https://github.com/mao-santaella-rs/NightWolfTheme)
 
+## Installation
+
+This theme is not yet released at VSCode Marketplace.
+
+If you want to try,
+
+1. Download VSIX file from [GitHub Release](https://github.com/SaiYs/NightJellyfishTheme/releases).
+
+2. Manually install it by
+
+```
+code --install-extension myextension.vsix
+```
+
+or
+
+`Extensions: Install from VSIX...` in the command palette.
+
+Reference: https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix
+
 ## Example
 
-![Rust](img/rust.png)
+![Rust](./img/rust.png)
 
 ## Colors
 
@@ -12,7 +32,7 @@ Dark theme for VSCode inspired by [Night Wolf](https://github.com/mao-santaella-
 
 | Base | Accent |
 | --- | --- |
-| <span style="background-color:#1f1e33">#1f1e33</span> | <span style="background-color:#ff50ff">#ff50ff</span> |
+| <span style="background-color:#1f1e33">[#1f1e33](https://www.youtube.com/watch?v=w4U9S5eX3eY)</span> | <span style="background-color:#ff50ff">#ff50ff</span> |
 
 ### Text
 
@@ -20,7 +40,7 @@ Basic text color
 
 | Text | Comment |
 | --- | --- |
-| <span style="background-color:#d1d1f7">#d1d1f7</span> | <span style="background-color:#78909c">#78909c</span> |
+| <span style="color:#d1d1f7;background-color:#1f1e33">#d1d1f7</span> | <span style="color:#78909c;background-color:#1f1e33">#78909c</span> |
 
 12 colors for language syntax and semantic highlight
 
@@ -30,7 +50,7 @@ Basic text color
 
 ## Highlighting
 
-- Semantic highlight optimized for Rust powered by [rust-analyzer](https://rust-analyzer.github.io/manual.html#semantic-syntax-highlighting)
+- Semantic highlight optimized for Rust, powered by [rust-analyzer](https://rust-analyzer.github.io/manual.html#semantic-syntax-highlighting)
 
 ## Contribute
 
