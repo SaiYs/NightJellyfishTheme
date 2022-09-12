@@ -1,6 +1,6 @@
-const semantic_colors = require('./semantic-colors')
+import { semantic_colors } from "./semantic-colors.ts";
 
-module.exports = function (colors) {
+export function template(colors: Record<string, chroma.Color>) {
   const themeColors = {
     "editor.background": colors.interBackground.hex(),
     "editor.foreground": colors.text.hex(),
@@ -351,8 +351,6 @@ module.exports = function (colors) {
     "gitDecoration.ignoredResourceForeground": colors.gitignoreExplorer.hex(),
     "gitDecoration.conflictingResourceForeground": colors.danger.hex(),
 
-    "progressBar.background": colors.contrast.hex(),
-
     "terminal.background": colors.principal.hex(),
     "terminalCursor.foreground": colors.contrast.hex(),
 
@@ -460,29 +458,6 @@ module.exports = function (colors) {
       scope: "constant.character.escape",
       settings: {
         foreground: colors.string.hex(),
-      },
-    },
-    {
-      name: "Meta Tag",
-      scope: ["punctuation.definition.tag", "meta.tag"],
-      settings: {
-        foreground: colors.metaTag.hex(),
-      },
-    },
-    {
-      name: "Tag attribute",
-      scope: ["entity.other.attribute-name", "entity.name.type.svelte"],
-      settings: {
-        foreground: colors.tagAttribute.hex(),
-        fontStyle: "italic",
-      },
-    },
-    {
-      name: "Pug Classes",
-      scope: "entity.other.attribute-name.class.pug",
-      settings: {
-        foreground: colors.pugClass.hex(),
-        fontStyle: "italic",
       },
     },
     {
@@ -1062,115 +1037,6 @@ module.exports = function (colors) {
       },
     },
     {
-      name: "css and pug ID selector",
-      scope: [
-        "entity.other.attribute-name.id",
-        "entity.other.attribute-name.id.css",
-        "entity.other.attribute-name.id.css punctuation.definition.entity.css",
-        "entity.other.attribute-name.id.scss",
-        "entity.other.attribute-name.id.css.sass",
-      ],
-      settings: {
-        foreground: colors.cssId.hex(),
-      },
-    },
-    {
-      name: "function declaration SASS",
-      scope: [
-        "support.function.name.sass.library",
-        "source.sass entity.name.function",
-      ],
-      settings: {
-        foreground: colors.sassFunction.hex(),
-      },
-    },
-    {
-      name: "css class selector",
-      scope: [
-        "entity.other.attribute-name.class.css",
-        "entity.other.attribute-name.class.css punctuation.definition.entity.css",
-        "entity.other.attribute-name.class.css.sass",
-        "entity.other.attribute-name.class.scss",
-      ],
-      settings: {
-        foreground: colors.cssClass.hex(),
-      },
-    },
-    {
-      name: "Tag selectors and &",
-      scope: [
-        "entity.name.tag.css",
-        "entity.name.tag.less",
-        "entity.name.tag.custom.css",
-        "entity.name.tag.reference.scss",
-        "entity.name.tag.css.sass",
-      ],
-      settings: {
-        foreground: colors.cssTag.hex(),
-        fontStyle: "normal",
-      },
-    },
-    {
-      name: "CSS Pseudo Class",
-      scope: [
-        "entity.other.attribute-name.pseudo-class.css",
-        "entity.other.attribute-name.pseudo-class.css punctuation.definition.entity.css",
-        "entity.other.pseudo-class.css.sass",
-
-        "entity.other.attribute-name.pseudo-element.css",
-        "entity.other.attribute-name.pseudo-element.css punctuation.definition.entity.css",
-      ],
-      settings: {
-        foreground: colors.cssPseudoClass.hex(),
-        fontStyle: "normal",
-      },
-    },
-    {
-      name: "Property name stylesheets",
-      scope: [
-        "support.type.property-name.css",
-        "support.type.property-name.css.sass",
-      ],
-      settings: {
-        foreground: colors.cssProperty.hex(),
-      },
-    },
-    {
-      name: "Values in css",
-      scope: ["support.constant.property-value.css"],
-      settings: {
-        foreground: colors.cssValue.hex(),
-      },
-    },
-    {
-      name: "Stylesheet Numbers and Units",
-      scope: [
-        "keyword.other.unit",
-        "keyword.other.unit.css",
-        "keyword.other.unit.scss",
-        "keyword.other.unit.css.sass",
-        "constant.numeric.css",
-        "punctuation.definition.constant.css",
-        "constant.numeric.css.sass",
-      ],
-      settings: {
-        foreground: colors.cssUnits.hex(),
-      },
-    },
-    {
-      name: "Support Type Property Name & entity name tags",
-      scope: [
-        "support.type.vendor.property-name",
-        "support.constant.vendor.property-value",
-        "support.type.property-name",
-        "meta.property-list entity.name.tag",
-      ],
-      settings: {
-        foreground: colors.cssSpecialWord.hex(),
-        fontStyle: "normal",
-      },
-    },
-    {
       name: "Keyword !important",
       scope: ["keyword.other.important.css", "keyword.other.important.scss"],
       settings: {
@@ -1186,31 +1052,6 @@ module.exports = function (colors) {
       ],
       settings: {
         foreground: colors.syntaxPurple.hex(),
-        fontStyle: "italic",
-      },
-    },
-    {
-      name: "Keyword",
-      scope: [
-        "punctuation.definition.keyword",
-        "entity.name.tag.reference",
-
-        "entity.name.tag.custom.css",
-        "entity.name.tag.custom.scss",
-        "entity.name.tag.custom.sass",
-
-        "support.function.sass",
-        "keyword.control.interpolation.sass",
-
-        "keyword.operator.css.sass",
-
-        "keyword.other.reserved.sass",
-
-        "keyword.control.at-rule",
-        "keyword.control.at-rule.css.sass",
-      ],
-      settings: {
-        foreground: colors.cssSpecialWord.hex(),
         fontStyle: "italic",
       },
     },
@@ -1236,45 +1077,6 @@ module.exports = function (colors) {
       ],
       settings: {
         foreground: colors.functionName.hex(),
-      },
-    },
-    {
-      name: "Attribute Name for CSS, SCSS and LESS",
-      scope: [
-        "meta.attribute-selector.css entity.other.attribute-name",
-        "meta.attribute-selector.less entity.other.attribute-name.attribute",
-        "entity.other.attribute-name.css.sass",
-        "keyword.operator.attribute-selector.css.sass",
-        "meta.attribute-selector",
-
-        "source.css.scss entity.other.attribute-name.attribute",
-        "meta.attribute-selector.scss",
-        "meta.attribute-selector.scss keyword.operator.scss",
-        "meta.attribute-selector.scss punctuation.definition.string.begin.scss",
-        "meta.attribute-selector.scss punctuation.definition.string.end.scss",
-        "meta.attribute-selector.scss punctuation.definition.attribute-selector.begin.bracket.square.scss",
-        "meta.attribute-selector.scss punctuation.definition.attribute-selector.end.bracket.square.scss",
-
-        "entity.other.attribute-selector.sass",
-
-        "meta.attribute-selector.css",
-        "meta.attribute-selector.css keyword.operator.pattern.css",
-        "meta.attribute-selector.css punctuation.definition.entity.begin.bracket.square.css",
-        "meta.attribute-selector.css punctuation.definition.entity.end.bracket.square.css",
-      ],
-      settings: {
-        foreground: colors.cssAttribute.hex(),
-      },
-    },
-    {
-      name: "SASS Interpolation",
-      scope: [
-        "support.function.interpolation.sass",
-        "punctuation.definition.interpolation.begin.bracket.curly.scss",
-        "punctuation.definition.interpolation.end.bracket.curly.scss",
-      ],
-      settings: {
-        foreground: colors.sassInterpolation.hex(),
       },
     },
   ];
@@ -1765,31 +1567,6 @@ module.exports = function (colors) {
 
   const tcHtml = [
     {
-      name: "HTML Tag names",
-      scope: [
-        "entity.name.tag",
-        "meta.tag.other.html",
-        "meta.tag.other.js",
-        "meta.tag.other.tsx",
-        "entity.name.tag.tsx",
-        "entity.name.tag.js",
-        "entity.name.tag",
-        "source.vue entity.name.tag.html invalid.illegal.unrecognized-tag.html",
-        "source.vue entity.name.tag.html",
-        "meta.tag.js",
-        "meta.tag.tsx",
-        "meta.tag.html",
-        "meta.tag.start.svelte",
-        "meta.tag.end.svelte",
-        "meta.tag.start.svelte keyword.control.svelte",
-        "meta.tag.end.svelte keyword.control.svelte",
-      ],
-      settings: {
-        foreground: colors.htmlTag.hex(),
-        fontStyle: "normal",
-      },
-    },
-    {
       name: "HTML invalid Tag names",
       scope: [
         "invalid.illegal.unrecognized-tag.html entity.name.tag",
@@ -2017,7 +1794,7 @@ module.exports = function (colors) {
   ];
 
   return {
-    name: "themename",
+    name: "NightJellyfish",
     type: "dark",
     semanticHighlighting: true,
     colors: {
@@ -2054,4 +1831,4 @@ module.exports = function (colors) {
     ],
     semanticTokenColors: semantic_colors(colors),
   };
-};
+}

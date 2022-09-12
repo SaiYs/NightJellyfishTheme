@@ -1,4 +1,4 @@
-module.exports = function semantic_colors(colors) {
+export function semantic_colors(colors: Record<string, chroma.Color>) {
   return {
     "attribute": colors.syntaxCyan.hex(),
     "enum": colors.syntaxOrange.hex(),
@@ -89,7 +89,6 @@ module.exports = function semantic_colors(colors) {
       "foreground": colors.syntaxOrange.hex(),
       "bold": true,
     },
-    "unresolvedReference": colors.text.hex(),
     "variable": colors.syntaxYellow.hex(),
     "variable.mutable": {
       "underline": true,
@@ -108,6 +107,5 @@ module.exports = function semantic_colors(colors) {
     "variable.callable": colors.syntaxCyan.hex(),
 
     "unresolvedReference": colors.testC.hex(),
-  }
-};
-
+  };
+}
