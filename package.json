@@ -32,9 +32,6 @@
         "color": "#1f1e33",
         "theme": "dark"
     },
-    "dependencies": {
-        "chroma-js": "^2.4.2"
-    },
     "scripts": {
         "gen": "deno run -A theme-compiler.ts"
     }
