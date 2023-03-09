@@ -1,4 +1,5 @@
 import chroma from "https://esm.sh/chroma-js@2.4.2";
+
 import { template } from "./common/base.ts";
 
 const white = chroma("#ffffff");
@@ -72,9 +73,9 @@ const colors: Record<string, chroma.Color> = {
   dangerDark: chroma(71, 32, 32), // rgb(71, 32, 32)
 
   // Test Colors
-  testA: chroma(255, 255, 0), // rgb(255, 255, 0)
-  testB: chroma(0, 255, 0), // rgb(0, 255, 0)
-  testC: chroma(255, 100, 0), // rgb(255, 100, 0)
+  // testA: chroma(255, 255, 0), // rgb(255, 255, 0)
+  // testB: chroma(0, 255, 0), // rgb(0, 255, 0)
+  // testC: chroma(255, 100, 0), // rgb(255, 100, 0)
 
   principal,
   principal_0,
@@ -86,8 +87,8 @@ const colors: Record<string, chroma.Color> = {
 
   text,
 
-  gitInsertedBg: chroma("#14332E"),
-  gitRemovedBg: chroma("#1E131C"),
+  gitInsertedBg: chroma("#14332e"),
+  gitRemovedBg: chroma("#1e131c"),
   gitignoreExplorer: principal.brighten(1.5),
 
   // INTERFACE COLORS

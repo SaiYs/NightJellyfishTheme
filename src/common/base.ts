@@ -1,4 +1,5 @@
 import chroma from "https://esm.sh/chroma-js@2.4.2";
+
 import { semantic_colors } from "./semantic-colors.ts";
 
 export function template(colors: Record<string, chroma.Color>) {
@@ -10,14 +11,17 @@ export function template(colors: Record<string, chroma.Color>) {
     "editorCursor.foreground": colors.contrast.hex(),
     "editorLink.activeForeground": null,
 
-    contrastActiveBorder: null,
-    contrastBorder: null,
-    focusBorder: colors.principal_3.hex(),
-    foreground: colors.text.hex(),
+    "editorInlayHint.background": colors.selection_1.hex(),
+    "editorInlayHint.foreground": colors.text.hex(),
+
+    "contrastActiveBorder": null,
+    "contrastBorder": null,
+    "focusBorder": colors.principal_3.hex(),
+    "foreground": colors.text.hex(),
     "widget.shadow": colors.black.hex() + "30",
     "selection.background": colors.selection_2.hex(),
-    descriptionForeground: colors.text.hex(),
-    errorForeground: colors.danger.hex(),
+    "descriptionForeground": colors.text.hex(),
+    "errorForeground": colors.danger.hex(),
 
     "icon.foreground": colors.text.hex(),
 
@@ -312,7 +316,7 @@ export function template(colors: Record<string, chroma.Color>) {
 
     "statusBar.noFolderForeground": null,
     "statusBar.noFolderBackground": colors.principal.hex(),
-    "statusBar.noFolderBorder": colors.contrast.hex(),
+    "statusBar.noFolderBorder": colors.interBorder.hex(),
 
     "statusBarItem.activeBackground": colors.principal_0.hex(),
     "statusBarItem.hoverBackground": colors.principal_1.hex(),

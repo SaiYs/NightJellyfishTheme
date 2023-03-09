@@ -108,6 +108,6 @@ export function semantic_colors(colors: Record<string, chroma.Color>) {
     },
     "variable.callable": colors.syntaxCyan.hex(),
 
-    "unresolvedReference": colors.testC.hex(),
+    "unresolvedReference": colors.white.hex(),
   };
 }
