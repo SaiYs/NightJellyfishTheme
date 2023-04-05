@@ -2,6 +2,14 @@
 
 Dark theme for VSCode inspired by [Night Wolf](https://github.com/mao-santaella-rs/NightWolfTheme)
 
+## Build
+
+Require deno in your machine.
+
+```
+deno run -A theme-compiler.ts
+```
+
 ## Installation
 
 This theme is not yet released at VSCode Marketplace.

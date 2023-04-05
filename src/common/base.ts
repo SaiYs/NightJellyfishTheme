@@ -25,6 +25,22 @@ export function template(colors: Record<string, chroma.Color>) {
 
     "icon.foreground": colors.text.hex(),
 
+    "editorBracketHighlight.foreground1": colors.syntaxRed.hex(),
+    "editorBracketHighlight.foreground2": colors.syntaxMagenta.hex(),
+    "editorBracketHighlight.foreground3": colors.syntaxPurple.hex(),
+    "editorBracketHighlight.foreground4": colors.syntaxViolet.hex(),
+    "editorBracketHighlight.foreground5": colors.syntaxBlue.hex(),
+    "editorBracketHighlight.foreground6": colors.syntaxCyan.hex(),
+
+    "editorBracketPairGuide.activeBackground1": colors.syntaxRed.hex(),
+    "editorBracketPairGuide.activeBackground2": colors.syntaxMagenta.hex(),
+    "editorBracketPairGuide.activeBackground3": colors.syntaxPurple.hex(),
+    "editorBracketPairGuide.activeBackground4": colors.syntaxViolet.hex(),
+    "editorBracketPairGuide.activeBackground5": colors.syntaxBlue.hex(),
+    "editorBracketPairGuide.activeBackground6": colors.syntaxCyan.hex(),
+
+    "editorBracketHighlight.unexpectedBracket.foreground": colors.danger.hex(),
+
     "sash.hoverBorder": colors.principal_3.hex(),
 
     "window.activeBorder": colors.principal.hex(),
@@ -1801,7 +1817,6 @@ export function template(colors: Record<string, chroma.Color>) {
   return {
     name: "NightJellyfish",
     type: "dark",
-    semanticHighlighting: true,
     colors: {
       ...themeColors,
     },
@@ -1834,6 +1849,7 @@ export function template(colors: Record<string, chroma.Color>) {
       ...tcPhp,
       ...tcCc,
     ],
+    semanticHighlighting: true,
     semanticTokenColors: semantic_colors(colors),
   };
 }
