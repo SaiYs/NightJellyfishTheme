@@ -490,7 +490,7 @@ export function template(colors: Record<string, chroma.Color>) {
       name: "Meta Tag",
       scope: ["punctuation.definition.tag", "meta.tag"],
       settings: {
-        foreground: colors.metaTag.hex(),
+        foreground: colors.text.hex(),
       },
     },
     {
@@ -498,7 +498,7 @@ export function template(colors: Record<string, chroma.Color>) {
       name: "Tag attribute",
       scope: ["entity.other.attribute-name", "entity.name.type.svelte"],
       settings: {
-        foreground: colors.tagAttribute.hex(),
+        foreground: colors.syntaxViolet.hex(),
         fontStyle: "italic",
       },
     },
@@ -507,7 +507,7 @@ export function template(colors: Record<string, chroma.Color>) {
       name: "Pug Classes",
       scope: "entity.other.attribute-name.class.pug",
       settings: {
-        foreground: colors.pugClass.hex(),
+        foreground: colors.syntaxYellow.hex(),
         fontStyle: "italic",
       },
     },
@@ -1835,7 +1835,7 @@ export function template(colors: Record<string, chroma.Color>) {
         "meta.tag.end.svelte keyword.control.svelte",
       ],
       settings: {
-        foreground: colors.htmlTag.hex(),
+        foreground: colors.syntaxBlue.hex(),
         fontStyle: "normal",
       },
     },

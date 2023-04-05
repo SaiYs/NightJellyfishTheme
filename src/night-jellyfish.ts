@@ -123,10 +123,10 @@ const colors: Record<string, chroma.Color> = {
   // deprecated: danger,
 
   // Markup
-  htmlTag: syntaxBlue, // div, a, li, etc...
-  metaTag: text, // <></>
-  tagAttribute: syntaxOrange, // class(className), id, onClick, ...
-  pugClass: syntaxYellow,
+  // htmlTag: syntaxBlue, // div, a, li, etc...
+  // metaTag: text, // <></>
+  // tagAttribute: syntaxOrange, // class(className), id, onClick, ...
+  // pugClass: syntaxYellow,
 
   // Stylesheets
   cssAttribute: syntaxGreen,
