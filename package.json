@@ -2,7 +2,7 @@
     "name": "night-jellyfish",
     "displayName": "Night Jellyfish",
     "description": "Night Jellyfish - dark theme for VSCode based on Night Owl and Night Wolf, optimized for Rust",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "publisher": "SaiYs",
     "engines": {
         "vscode": "^1.68.0"
@@ -33,6 +33,6 @@
         "theme": "dark"
     },
     "scripts": {
-        "gen": "deno run -A theme-compiler.ts"
+        "build": "deno run -A theme-compiler.ts"
     }
 }
