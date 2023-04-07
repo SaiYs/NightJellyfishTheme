@@ -18,7 +18,7 @@ export function template(colors: Record<string, chroma.Color>) {
     "contrastBorder": null,
     "focusBorder": colors.principal_3.hex(),
     "foreground": colors.text.hex(),
-    "widget.shadow": colors.black.hex() + "30",
+    "widget.shadow": `${colors.black.hex()}30`,
     "selection.background": colors.selection_2.hex(),
     "descriptionForeground": colors.text.hex(),
     "errorForeground": colors.danger.hex(),
@@ -157,10 +157,10 @@ export function template(colors: Record<string, chroma.Color>) {
     "inputValidation.warningBackground": colors.warningDark.hex(),
     "inputValidation.warningBorder": colors.warning.hex(),
 
-    "scrollbar.shadow": colors.black.hex() + "50",
-    "scrollbarSlider.activeBackground": colors.principal_3.hex() + "50",
-    "scrollbarSlider.background": colors.principal_3.hex() + "50",
-    "scrollbarSlider.hoverBackground": colors.principal_3.hex() + "80",
+    "scrollbar.shadow": `${colors.black.hex()}50`,
+    "scrollbarSlider.activeBackground": `${colors.principal_3.hex()}50`,
+    "scrollbarSlider.background": `${colors.principal_3.hex()}50`,
+    "scrollbarSlider.hoverBackground": `${colors.principal_3.hex()}80`,
 
     "badge.background": colors.notificationBadge.hex(),
     "badge.foreground": colors.principal.hex(),
@@ -212,7 +212,7 @@ export function template(colors: Record<string, chroma.Color>) {
     "activityBar.activeFocusBorder": colors.contrast.hex(),
 
     "editorGroup.border": colors.interBorder.hex(),
-    "editorGroup.dropBackground": colors.contrast.hex() + "70",
+    "editorGroup.dropBackground": `${colors.contrast.hex()}70`,
     "editorGroupHeader.noTabsBackground": colors.interBackground.hex(),
     "editorGroupHeader.tabsBackground": colors.interBackground.hex(),
     "editorGroupHeader.tabsBorder": colors.interBorder.hex(),
@@ -283,12 +283,12 @@ export function template(colors: Record<string, chroma.Color>) {
     "peekViewTitleDescription.foreground": colors.text.hex(),
     "peekViewTitleLabel.foreground": colors.text.hex(),
 
-    "merge.currentHeaderBackground": colors.succesLight.hex() + "50",
+    "merge.currentHeaderBackground": `${colors.succesLight.hex()}50`,
     "merge.currentContentBackground": null,
-    "merge.incomingHeaderBackground": colors.infoLight.hex() + "50",
+    "merge.incomingHeaderBackground": `${colors.infoLight.hex()}50`,
     "merge.incomingContentBackground": null,
     "merge.border": null,
-    "merge.commonContentBackground": colors.warningLight.hex() + "50",
+    "merge.commonContentBackground": `${colors.warningLight.hex()}50`,
     "merge.commonHeaderBackground": null,
 
     "editorOverviewRuler.currentContentForeground": colors.contrast.hex(),
@@ -323,15 +323,15 @@ export function template(colors: Record<string, chroma.Color>) {
     "panelSectionHeader.border": colors.interBorder.hex(),
 
     "statusBar.background": colors.principal.hex(),
-    "statusBar.foreground": colors.principal_5.hex(),
+    "statusBar.foreground": colors.text.hex(),
     "statusBar.border": colors.interBorder.hex(),
 
-    "statusBar.debuggingBackground": colors.warning.hex(),
-    "statusBar.debuggingForeground": colors.principal.hex(),
-    "statusBar.debuggingBorder": colors.warning.hex(),
+    "statusBar.debuggingBackground": colors.contrastDark.hex(),
+    "statusBar.debuggingForeground": colors.text.hex(),
+    "statusBar.debuggingBorder": colors.interBorder.hex(),
 
-    "statusBar.noFolderForeground": null,
     "statusBar.noFolderBackground": colors.principal.hex(),
+    "statusBar.noFolderForeground": colors.text.hex(),
     "statusBar.noFolderBorder": colors.interBorder.hex(),
 
     "statusBarItem.activeBackground": colors.principal_0.hex(),
@@ -339,6 +339,9 @@ export function template(colors: Record<string, chroma.Color>) {
     "statusBarItem.prominentBackground": colors.principal_3.hex(),
     "statusBarItem.prominentForeground": colors.text.hex(),
     "statusBarItem.prominentHoverBackground": colors.principal_3.hex(),
+
+    "statusBarItem.remoteBackground": colors.white.hex(),
+    "statusBarItem.remoteForeground": colors.principal.hex(),
 
     "titleBar.activeBackground": colors.principal.hex(),
     "titleBar.activeForeground": colors.principal_5.hex(),
@@ -2052,7 +2055,7 @@ export function template(colors: Record<string, chroma.Color>) {
         "comment.block.documentation entity.name.type.instance.phpdoc",
       ],
       settings: {
-        foreground: colors.syntaxViolet.hex() + "80",
+        foreground: `${colors.syntaxViolet.hex()}80`,
       },
     },
     {
@@ -2062,7 +2065,7 @@ export function template(colors: Record<string, chroma.Color>) {
         "comment.block.documentation variable.other.phpdoc",
       ],
       settings: {
-        foreground: colors.syntaxYellow.hex() + "80",
+        foreground: `${colors.syntaxYellow.hex()}80`,
       },
     },
     {
@@ -2072,7 +2075,7 @@ export function template(colors: Record<string, chroma.Color>) {
         "comment.block.documentation punctuation.definition.block.tag.jsdoc",
       ],
       settings: {
-        foreground: colors.syntaxBlue.hex() + "80",
+        foreground: `${colors.syntaxBlue.hex()}80`,
       },
     },
   ];
